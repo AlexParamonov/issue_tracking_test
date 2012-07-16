@@ -1,6 +1,6 @@
 IssueTracking::Application.routes.draw do
   filter :locale
-  # root to: "page#welcome"
+  root to: "pages#welcome"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
