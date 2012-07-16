@@ -3,14 +3,42 @@
 .sass-cache
 capybara-*.html
 .rspec
-/.bundle
-/vendor/bundle
-/log/*
-/tmp/*
-/db/*.sqlite3
 /public/system/*
-/coverage/
 /spec/tmp/*
 **.orig
 rerun.txt
 pickle-email-*.html
+
+# Ignore bundler config
+/.bundle
+/vendor/bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# ignore database.yml
+config/database.yml
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+
+# Ignore vimtags
+tags
+TAGS
+
+pkg/
+.idea/
+doc/
+/coverage
+/coverage.data
+/.yardoc
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.swo
+*.md.html
