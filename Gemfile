@@ -11,6 +11,7 @@ gem 'jdbc-sqlite3', :platform => :jruby
 gem 'jquery-rails', '~>2.0'
 gem 'haml-rails', '~>0.3'
 gem 'routing-filter', '~>0.3'
+gem 'display_case', '~>0.0.3'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.6'
