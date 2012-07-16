@@ -19,6 +19,9 @@ pickle-email-*.html
 # ignore database.yml
 config/database.yml
 
+# ignore secret_tocken.rb
+config/initializers/secret_token.rb
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*

@@ -1,3 +1,5 @@
+require_relative 'i18n_support'
+
 module Kameleon
   module DSL
     class ScopeProxy

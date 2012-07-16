@@ -12,9 +12,11 @@ gem 'jquery-rails', '~>2.0'
 gem 'haml-rails', '~>0.3'
 gem 'routing-filter', '~>0.3'
 gem 'display_case', '~>0.0.3'
+gem 'cells', '~>3.8'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.6'
+  gem "rspec-cells", '~>0.1'
   gem 'database_cleaner', '~>0.8'
   gem 'guard-rspec', '~>1.2'
 end
