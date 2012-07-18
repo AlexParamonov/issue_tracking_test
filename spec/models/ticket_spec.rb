@@ -29,7 +29,9 @@ describe 'Ticket' do
     end
 
     describe 'status' do
-      it 'should be "Waiting for staff response" by default'
+      it 'should be "Waiting for staff response" by default' do
+        ticket.status.title.should eq "Waiting for staff response"
+      end
     end
   end
 end
