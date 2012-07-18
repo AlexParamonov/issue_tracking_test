@@ -1,7 +1,12 @@
 require_relative 'ticket/status'
 
 class Ticket
+  include ActiveModel::Validations
+  validates :department, presence: true
+
+  attr_accessor :department
   attr_accessor :status
+  delegate :code, :to => :department, :prefix => true, :allow_nil => true
 
   def reference_code
     @reference_code ||= generate_reference_code

@@ -1,5 +1,6 @@
-require_relative '../../app/models/ticket'
 require_relative '../spec_helper_lite'
+require 'active_model'
+require_relative '../../app/models/ticket'
 
 describe 'Ticket' do
   let(:ticket) { Ticket.new }
@@ -32,6 +33,18 @@ describe 'Ticket' do
       it 'should be "Waiting for staff response" by default' do
         ticket.status.title.should eq "Waiting for staff response"
       end
+    end
+  end
+
+  describe 'validation' do
+    it "should be valid with department set" do
+      ticket.department = stub
+      ticket.should be_valid
+    end
+
+    it "should be invalid without department" do
+      ticket.stub(:department) { nil }
+      ticket.should_not be_valid
     end
   end
 end
