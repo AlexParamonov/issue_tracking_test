@@ -4,7 +4,11 @@ class Ticket
     @reference_code ||= generate_reference_code
   end
 
+  private
   def generate_reference_code
-    ReferenceCode.generate_for_ticket(self)
+    prefix = self.department_code
+    ticket_id = self.id
+
+    "#{prefix}_#{ticket_id}"
   end
 end

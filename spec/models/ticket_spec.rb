@@ -2,11 +2,20 @@ require_relative '../../app/models/ticket'
 require_relative '../spec_helper_lite'
 
 describe 'Ticket' do
+  let(:ticket) { Ticket.new }
+
+  describe 'reference code' do
+    it 'should be in format DEP_ID' do
+      ticket.stub(:id) { 123 }
+      ticket.stub(:department_code ) { "ABC" }
+
+      ticket.reference_code.should eq "ABC_123"
+    end
+  end
+
   context 'when created' do
-    let(:ticket) do
-      Ticket.new.tap do |t|
-        t.stub(:generate_reference_code) { "ABC_123" }
-      end
+    before(:each) do
+      ticket.stub(:generate_reference_code) { "ABC_123" }
     end
 
     describe 'an email' do
